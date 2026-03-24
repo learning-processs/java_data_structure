@@ -1,0 +1,95 @@
+TYPE OF LANGUAGE
+
+
+STATIC AND DYNAMIC 
+
+STATIC 
+perform type checking at compile time 
+Errors will show at compile time
+Declare datatype before you use it 
+More control
+
+DYNAMIC 
+Perform type checking at runtime
+Error mightnot show till program is run
+No need to declare datatype of variable
+Sabes time in writing code but might give error at runtime
+
+PLATEFORM INDEPENDENCE
+
+ run on all operating system
+
+JDK 
+
+Provide enviroment to develop and run the Java program
+It is a package that includes : 
+1. development tool - to provide an env to develop your program
+2. JRE - to execute your program
+3. a compiler -javac
+archiver -jar
+docs generator - javadoc
+interpreter/loader
+
+JRE
+
+It is an installation package that provides env to only run the program
+It consist of :
+1.Deployment technologies
+2.User interface toolkits
+3.Intefration libraries
+4.Base libraries
+5.JVM
+After we get .class file , the next things happen at runtime:
+1.class loader all classes needed to excute the program
+2.JVM sends code to Byte code verifier to check the format of code
+
+JVM
+Interpreter:
+line by line execution
+when one method is many times, it willinterpret again and agaiin
+JIT :
+Those methods that are repeated, JIT provides direct mechine code so re-interpretation is not required
+makes execution faster
+Garbage collector
+
+
+// ----------------------------------String------------------------------
+
+String Pool - all similar value are not recreated int the pool so the other reference variable directly 
+poiting to that similar value 
+
+Immutable - can't modify
+   If wann to modify then create another object..
+
+
+ String name = "Kunal Kushwaha";
+        System.out.println(name);
+
+        name = "Anu";  // here we are not changing the name we are creating a new object.
+        System.out.println(name);
+
+
+
+String are Immutable because of security reason , becoz if a diffrent reference vaible pointing
+the same value in heap but one of them wann to change the value if it's not immutable then it's 
+change for all the reference varible
+
+-------------------------------------Recursion------------------------------------------
+
+Fuction Calling itself - Recursion, 
+Base condition - where our recursion stop making new calls.
+
+Why Recursion ? 
+It help us in solving bigger complex problem in simpler way.
+YOu can covert recursion solutions into itration and vice-versa. -> to get more optimised version.
+space complexity - not constant becoz of recursive call.
+
+Approach : -
+- if you can break down problem into smaller problem..
+- write the recurance relation if needed
+- Draw the recursive tree
+- About the tree
+
+
+-------------------------------------Time Complexity------------------------------------------
+
