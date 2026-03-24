@@ -93,3 +93,11 @@ Approach : -
 
 -------------------------------------Time Complexity------------------------------------------
 
+complexity :- 
+
+Time Complexity != time taken
+
+- Time Complexity is basically the mathematical function tells us how the time is 
+  grow as its input grows.
+
+- Fuction that fives us the relationship about how the time will grow as the input grow.
