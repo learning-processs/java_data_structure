@@ -100,4 +100,114 @@ Time Complexity != time taken
 - Time Complexity is basically the mathematical function tells us how the time is 
   grow as its input grows.
 
-- Fuction that fives us the relationship about how the time will grow as the input grow.
+- Fuction that gives us the relationship about how the time will grow as the input grow.
+
+- What do we consider when thinking about time complexity ??
+ (i)- worst case complexity
+ (ii) - Always look at complexity for large/ infinite data.
+ (iii) - We ignore the constant becoz the things matter is only how the time is grow 
+        with input.
+ (iv) - Always ignore less dominating term.
+
+
+Big-Oh Notation :-
+  - upper bound 
+    eg. O(n^3) - upper bound - never exceed the n^3 possible in less but never exceed.
+
+
+Big Omega Notation :- 
+  - lower bound
+    e.g. omega(n^3) - minimum n^3 time complexity required
+
+Theta Notation 
+  - upper and lower bound
+ 
+
+2 more :-
+little O Notation : - 
+ - upper bound - not strict upper bound
+
+little Omega Notation : - 
+ - lower bound - not strict lower bound 
+
+
+Space Complexity :- 
+- i/p take of size n + extra space that algorithm used
+
+
+Recursive Algorithms : - 
+  - At any particular point of time no two fuction call at same level of recurison will be in 
+    stack at same time
+  - space complexity is hight of tree
+  - Fibonacci no. - O(n)
+
+
+Recursion : -
+  (i) - Linear
+    e.g - F(n) = f(n-1) + f(n-2)
+    
+  (ii) - Divide and conquer
+    e.g. - F(n) = (f/2) + O(1)
+
+---------------------- ------------------------------
+Akra Bazzi Formaula to solve the recurance relations
+
+
+Theta[x^p + x^p intg x to 1 g(x)/n^p+1 du]
+
+a1b1^p + z2b2^p +............... = 1;
+
+ k
+sumation aibi^p = 1;
+ i=1
+ ---------------------------------------------------
+
+ Merge sort Complexity - O(nlogn)
+
+
+Linear Recurrences : -
+
+
+-----------------------------------------BITWISE OPERATOR--------------------------------------
+& - both condition should be true.
+| - any one of them should be true.
+^ - In both of them only one should be true. 
+    If both true or both false then it's gives false.
+
+complement(~) :  1 0 1 1 0
+                 0 1 0 0 1
+
+Number System : - 
+
+Decimal : 0, 1,2,3,3,4,5 -> Base(10)
+
+binary Number : 0, 1 -> Base(2)
+e.g. (10)base10 = (1010)base2
+
+Octal : 0, 1,2,3,4,5,6,7,10,11,12,13,14,15,16,17,20 -> Base(8)
+e.g. (9)base10 = (11)base8
+
+Hexa Decimal : 0,1,2,3,4,5,6,7,8,9, A, B, C , D , E, F
+e.g. (12)base10 = (C)base16
+
+- Convert any decimal to base then keep dividing....
+
+- Convert any base to decimal - Multiply and dd the power of base with digits
+  e.g. (10001) base 2 - 1*2^5 +0*2^4 + 0*2^3 + 0*2^1 + 1*2^0
+
+
+Left Shift operator (<<) : - 
+-------------------------
+
+Formula : a << 1 = 2a
+General point : a << b = a * 2^b
+
+e.g. 1010 << 1 = 1010 0
+
+Right shift : 
+a >> b = a/2^b
+e.g. 0 0 1 1 0 0 1 >> 1 => 0 0 1 1 0 0 
+                 _ ->remove
+
+- If the last no in binary  is 1 then it's odd and if it's 0 then even.
+
