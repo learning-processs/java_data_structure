@@ -2,14 +2,15 @@ package Maths;
 
 public class IsPrime {
     public static void main(String[] args) {
-        int n = 4;
-        System.out.println(isPrime(n));
+        int n = 13;
+        System.out.println("Is Prime : " + isPrime(n));
     }
 
-    static boolean isPrime(int n){
-        // if(n <= 1 ) return false;
-        for( int i = 2 ; i< n ; i++){
-            if(n%i== 0){
+    static boolean isPrime(int n) {
+        if (n <= 1)
+            return false;
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
