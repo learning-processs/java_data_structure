@@ -3,7 +3,7 @@ package recursion;
 public class FibonacciNum {
     public static void main(String[] args) {
 
-        int result = fn(50);
+        int result = fn(10);
         System.out.println(result);
 
     }

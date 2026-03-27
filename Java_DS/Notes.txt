@@ -211,3 +211,9 @@ e.g. 0 0 1 1 0 0 1 >> 1 => 0 0 1 1 0 0
 
 - If the last no in binary  is 1 then it's odd and if it's 0 then even.
 
+-----------------------------------------NEWTON RAPSON METHOD--------------------------------------
+
+root = √ x + N/x    OR  ( x + n/2)/2 ;        
+x = squate root that we assume
+
+

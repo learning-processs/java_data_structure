@@ -1,24 +1,40 @@
+
 public class PracticeQuestion {
     public static void main(String[] args) {
-        int x = 121;
+        int n = 40;
+        int p = 3;
 
-        System.out.println(isPalindrome(x));
-
+        System.out.println(sqare_root(n, p));
     }
 
-    static boolean isPalindrome(int x){
+    static double sqare_root(int n , int p){
+        int s = 0 ;
+        int e = n;
 
-        if( x < 0){
-            return false;
-        }
-        int original = x;
-        int reverse = 0;
+        double root = 0.0;
 
-        while (x != 0) {
-            int digits = x % 10;
-            reverse = reverse*10 +digits;
-            x /=10;
+        while (s <= e) {
+            int m = s + ( e - s)/ 2;
+
+            if( m * m == n){
+                return m;
+            }
+
+            if(m * m > n){
+                e = m -1;
+            }else {
+                 s = m + 1;
+            }
         }
-        return original == reverse;
+
+        double inc = 0.1;
+        for(int i = 0 ; i < p ; i++){
+            while(root * root <= n){
+                root+=inc;
+            }
+            root-=inc;
+            inc/=10;
+        }
+        return root;
     }
 }
