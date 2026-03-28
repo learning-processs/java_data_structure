@@ -22,6 +22,6 @@ public class Dec_Num {
         }
 
         revFun(n - 1);
-        System.out.println();
+        System.out.println(n);
     }
 }

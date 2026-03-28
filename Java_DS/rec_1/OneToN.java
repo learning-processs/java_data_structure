@@ -14,4 +14,6 @@ public class OneToN {
         System.out.println(n);
         oneToN(n+1);
     }
+
+    
 }
