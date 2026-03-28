@@ -15,4 +15,13 @@ public class Dec_Num {
         System.out.println(n);
         nToOne(n-1);
     }
+
+    static void revFun(int n){
+        if (n == 0) {
+            return;
+        }
+
+        revFun(n - 1);
+        System.out.println();
+    }
 }
