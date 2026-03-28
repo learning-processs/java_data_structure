@@ -2,7 +2,7 @@ package Maths;
 
 public class NewtonSqrt {
     public static void main(String[] args) {
-        
+        System.out.println(sqrt(40));
     }
 
 
@@ -13,10 +13,11 @@ public class NewtonSqrt {
         while (true) {
              root = 0.5 * ( x + (n/x));
 
-            if(Math.abs(root - x) < 1){
+            if(Math.abs(root - x) < 0.5){
                 break;
             }
             x = root;
         }
+        return root;
     }
 }
