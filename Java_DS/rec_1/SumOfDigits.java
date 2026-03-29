@@ -2,7 +2,7 @@ package rec_1;
 
 public class SumOfDigits {
     public static void main(String[] args) {
-        int n = 1342;
+        int n = 102;
         int result = sumOfDigits(n);
         System.out.println(result);
 
