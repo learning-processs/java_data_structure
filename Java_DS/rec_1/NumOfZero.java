@@ -2,13 +2,13 @@ package rec_1;
 
 public class NumOfZero {
     public static void main(String[] args) {
-        int n = 12030430;
+        int n = 11203043;
         System.out.println(numOfZero(n));
     }
 
     static int numOfZero(int n) {
-        if (n == 0) {
-            return 0;
+        if (n < 10) {
+            return n == 0 ? 1 : 0;
         }
 
         int rem = n % 10;
