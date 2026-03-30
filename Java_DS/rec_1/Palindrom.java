@@ -12,7 +12,7 @@ public class Palindrom {
         }
 
         int rem = n % 10;
-       return rem * (int)Math.pow(10, (int)Math.log10(n)) + rev(n/10);
+        return rem * (int)Math.pow(10, (int)Math.log10(n)) + rev(n/10);
     }
 
     static boolean palindrom(int n ){
