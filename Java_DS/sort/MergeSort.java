@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class MergeSort {
     public static void main(String[] args) {
         int arr [] = { 8, 3, 4, 12,5,6};
+        arr = mergeSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -58,3 +59,11 @@ public class MergeSort {
         return newArray;
     }
 }
+
+
+// Complexity of Merge Sort => O(n * log n);
+/*
+    n
+    n/2 n/2
+    and at end 1, 1, 1 element
+ */
