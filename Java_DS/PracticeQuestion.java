@@ -1,40 +1,56 @@
 
 public class PracticeQuestion {
     public static void main(String[] args) {
-        int n = 40;
-        int p = 3;
+        subStr("aabbccd", " ");
 
-        System.out.println(sqare_root(n, p));
+        System.out.println(subStr2("aabbccd"));
+
+        System.out.println(skipApple("baccdahapplebanc"));
+
     }
 
-    static double sqare_root(int n , int p){
-        int s = 0 ;
-        int e = n;
-
-        double root = 0.0;
-
-        while (s <= e) {
-            int m = s + ( e - s)/ 2;
-
-            if( m * m == n){
-                return m;
-            }
-
-            if(m * m > n){
-                e = m -1;
-            }else {
-                 s = m + 1;
-            }
+    static void subStr(String unprocessed , String processed){
+        if(unprocessed.isEmpty()){
+            System.out.println(processed);
+            return;
         }
 
-        double inc = 0.1;
-        for(int i = 0 ; i < p ; i++){
-            while(root * root <= n){
-                root+=inc;
-            }
-            root-=inc;
-            inc/=10;
+        char ch = unprocessed.charAt(0);
+
+        if(ch == 'a'){
+            subStr(unprocessed.substring(1), processed);
+        }else{
+            subStr(unprocessed.substring(1),processed + ch);
         }
-        return root;
     }
+
+    static String subStr2(String unprocessed){
+        if(unprocessed.isEmpty()){
+            return " ";
+        }
+
+        char ch = unprocessed.charAt(0);
+
+        if(ch == 'a'){
+            return subStr2(unprocessed.substring(1));
+        }else{
+            return ch + subStr2(unprocessed.substring(1));
+        }
+    }
+
+
+    static String skipApple(String unprocessed){
+        if(unprocessed.isEmpty()){
+            return "";
+        }
+
+        if(unprocessed.startsWith("apple")){
+            return skipApple(unprocessed.substring(5));
+        }else{
+            return unprocessed.charAt(0) + skipApple(unprocessed.substring(1));
+        }
+    }
+
+
+
 }
