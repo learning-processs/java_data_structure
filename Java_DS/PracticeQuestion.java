@@ -1,56 +1,34 @@
 
+import java.util.List;
+import java.util.ArrayList;
 public class PracticeQuestion {
     public static void main(String[] args) {
-        subStr("aabbccd", " ");
+        int arr[] = { 1,2 , 3};
 
-        System.out.println(subStr2("aabbccd"));
+        List<List<Integer>> ans = subset(arr);
 
-        System.out.println(skipApple("baccdahapplebanc"));
-
-    }
-
-    static void subStr(String unprocessed , String processed){
-        if(unprocessed.isEmpty()){
-            System.out.println(processed);
-            return;
-        }
-
-        char ch = unprocessed.charAt(0);
-
-        if(ch == 'a'){
-            subStr(unprocessed.substring(1), processed);
-        }else{
-            subStr(unprocessed.substring(1),processed + ch);
+        for(List<Integer> list : ans){
+            System.out.println(list);
         }
     }
 
-    static String subStr2(String unprocessed){
-        if(unprocessed.isEmpty()){
-            return " ";
+    static List<List<Integer>> subset(int arr[]){
+
+        List<List<Integer>> outer = new ArrayList<>();
+
+        outer.add(new ArrayList<>());
+
+        for(int num : arr){
+            int n  = outer.size();
+            for(int i = 0 ; i < n ; i++){
+                List<Integer> internal = new ArrayList<>(outer.get(i));
+                internal.add(num);
+                outer.add(internal);
+            }
+            
         }
 
-        char ch = unprocessed.charAt(0);
-
-        if(ch == 'a'){
-            return subStr2(unprocessed.substring(1));
-        }else{
-            return ch + subStr2(unprocessed.substring(1));
-        }
+        return outer;
     }
-
-
-    static String skipApple(String unprocessed){
-        if(unprocessed.isEmpty()){
-            return "";
-        }
-
-        if(unprocessed.startsWith("apple")){
-            return skipApple(unprocessed.substring(5));
-        }else{
-            return unprocessed.charAt(0) + skipApple(unprocessed.substring(1));
-        }
-    }
-
-
 
 }
