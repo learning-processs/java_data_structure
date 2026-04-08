@@ -8,11 +8,14 @@ public class Permutations {
 
     public static void main(String[] args) {
         
-    // permutations("", "str");    
+    permutations("", "str");    
 
 
     ArrayList<String> ans = permutationsLists("", "abc");
     System.out.println(ans);
+    
+
+    System.out.println(permutationsCount("", "anu"));
 }
 
     static void permutations(String proc, String uproc){
@@ -29,6 +32,7 @@ public class Permutations {
             permutations(f + ch + s, uproc.substring(1));
         }
     }
+
 
 
     static ArrayList<String> permutationsLists(String proc, String uproc){
@@ -48,5 +52,21 @@ public class Permutations {
             ans.addAll(permutationsLists(f + ch + s, uproc.substring(1)));
         }
         return ans;
+    }
+
+    static int permutationsCount(String proc, String uproc){
+        if(uproc.isEmpty()){
+            return 1;
+        }
+
+        int count = 0;
+        char ch = uproc.charAt(0);
+
+        for(int i = 0 ; i <=proc.length() ; i++){
+            String f = proc.substring(0,i);
+            String s = proc.substring(i, proc.length());
+            count = count + permutationsCount(f + ch + s, uproc.substring(1));
+        }
+        return count;
     }
 }
