@@ -1,34 +1,30 @@
 
 import java.util.List;
 import java.util.ArrayList;
+
 public class PracticeQuestion {
     public static void main(String[] args) {
-        int arr[] = { 1,2 , 3};
-
-        List<List<Integer>> ans = subset(arr);
-
-        for(List<Integer> list : ans){
-            System.out.println(list);
-        }
+        pad("", "12");
     }
 
-    static List<List<Integer>> subset(int arr[]){
-
-        List<List<Integer>> outer = new ArrayList<>();
-
-        outer.add(new ArrayList<>());
-
-        for(int num : arr){
-            int n  = outer.size();
-            for(int i = 0 ; i < n ; i++){
-                List<Integer> internal = new ArrayList<>(outer.get(i));
-                internal.add(num);
-                outer.add(internal);
-            }
-            
+    static ArrayList<String> pad(String process, String uprocess) {
+        if (uprocess.isEmpty()) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(process);
+            return list;
         }
 
-        return outer;
+        int digit = uprocess.charAt(0) - '0';
+
+        ArrayList<String> list = new ArrayList<>();
+
+        for (int i = (digit - 1) * 3; i < digit * 3; i++) {
+            char ch = (char) ('a' + i);
+            list.addAll(pad(process + ch, uprocess.substring(1)));
+        }
+
+        return list;
+
     }
 
 }
