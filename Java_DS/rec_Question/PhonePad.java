@@ -18,7 +18,7 @@ public class PhonePad {
 
         String digits = "23";
         System.out.println(letterCombinationList("", digits));
-        
+
 
         System.out.println(letterCombinationCount("", digits));
     }
@@ -65,7 +65,6 @@ public class PhonePad {
             char ch = (char)('a' + i);
             count = count + letterCombinationCount(process + ch, unprocess.substring(1));
         }
-
         return count ;
     }
 }
