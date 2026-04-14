@@ -2,20 +2,20 @@ package backtracking;
 
 public class NQueens {
     public static void main(String[] args) {
-        int n = 4;
+        int n = 8;
         boolean board[][] = new boolean[n][n];
-        queens(board, 0);
+        System.out.println(queens(board, 0));
     }
 
     static int queens(boolean[][] board, int row) {
         if (row == board.length) {
             display(board);
+            System.out.println();
             return 1;
         }
         // placing queen for every row and col
 
         int count = 0;
-
         for (int col = 0; col < board.length; col++) {
             if (isSafe(board, row, col)) {
                 board[row][col] = true;
@@ -43,7 +43,7 @@ public class NQueens {
             }
         }
 
-        // diagonal left
+        // diagonal Right
         int maxRight = Math.min(row, board.length - col - 1);
         for (int i = 1; i <= maxRight; i++) {
             if (board[row - i][col + i]) {
@@ -57,7 +57,7 @@ public class NQueens {
     static void display(boolean[][] board) {
         for (boolean[] row : board) {
             for (boolean element : row) {
-                if (element) {
+                if (element) {            // element is true
                     System.out.print("Q ");
                 } else {
                     System.out.print("X ");
