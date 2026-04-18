@@ -280,3 +280,7 @@ This is a reference variable.
 
 s does NOT store the actual object
 It stores the reference (address) of the object in memory
+
+
+ .this keyword =>   // this keyword just replacing the referance varible
+ 
