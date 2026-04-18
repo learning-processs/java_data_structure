@@ -234,3 +234,49 @@ L = ax + by
 
 gcd(a,b) = gcd(rem(b,a), a)
 
+----------------------------------------OOPS-------------------------------------
+🧱 What is a Class?
+
+A class is a blueprint (template) used to create objects.
+
+👉 It defines:
+
+variables (data / properties)
+methods (functions / behavior)
+
+
+
+🧍 What is an Object?
+
+An object is a real instance of a class.
+
+👉 If class = blueprint
+👉 object = actual thing built from it
+
+
+., (seperator, dot Operator) => access any instance variable
+new Operator                 => Dynamically allocates memory and return the reference to it.
+
+
+Student s = new Student();
+Student is a class.
+A class is like a blueprint or template.
+
+new Student()?
+
+This part does object creation.
+
+new is a keyword used to allocate memory.
+Student() calls the constructor of the class.
+
+👉 Constructor:
+
+A special method with the same name as the class
+Automatically called when an object is created
+
+. What is Student s?
+
+This is a reference variable.
+
+s does NOT store the actual object
+It stores the reference (address) of the object in memory
