@@ -11,6 +11,7 @@ public class Introduction {
 
         // s.changeName("Lia");
         // s.greeting();
+        Student s3 = new Student();
 
 
         System.out.println(s.name);
@@ -25,6 +26,7 @@ public class Introduction {
 
     }
 }
+
 
 class Student {
     String name;
@@ -41,13 +43,18 @@ class Student {
         name = newName;
     }
 
-    Student() { // Constructor
-        this.name = "Anu";
-        this.rollNo = 28;
-        this.marks = 9.0f;
-    }
+    // Student() { // Constructor
+    //     this.name = "Anu";
+    //     this.rollNo = 28;
+    //     this.marks = 9.0f;
+    // }
 
-    this keyword just replacing the referance varible
+    // this keyword just replacing the referance varible
+    // It replace with current object when we call it
+
+    Student (){
+        this("Tina", 26, 1.4f);
+    }
 
     Student(String name, int rollNo , float marks) { // Constructor
         this.name = name;
