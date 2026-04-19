@@ -20,6 +20,15 @@ public class WrapperExample {
 
         final A  anu = new A("Anu Kushwaha");
         anu.name = "Other name";
+
+        // When a non-premitive is final, you cannt
+        // anu = new A("new Obj");
+
+
+        A obj ;
+        for(int i = 0 ; i< 100 ; i++){
+            obj = new A("Random Name");
+        }
     }
 
     static void swap(Integer a , Integer b){
@@ -36,6 +45,12 @@ class A {
 
     public A(String name){
         this.name = name;
+    }
+
+    // We can't free the m/m but can tell what to do
+    @Override                                              // When this fuction is avaliable in class and it destoyed by grabage classs it called
+    protected void finalize() throws Throwable{
+        System.out.println("Object is destoryed...");
     }
 
 }
