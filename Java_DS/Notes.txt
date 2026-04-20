@@ -285,3 +285,13 @@ It stores the reference (address) of the object in memory
  .this keyword =>  this keyword just replacing the referance varible
   It replace with current object when we call it
  
+--------------------------------PACKAGE-------------------------------
+A package is a collection of related classes and interfaces grouped together
+
+Built-in packages (Java API)
+Provided by Java, like:
+
+java.lang (basic classes like String, Math)
+java.util (collections, date utilities)
+
+User-defined packages => package is just a folder, Created by developers to organize their own classes.
