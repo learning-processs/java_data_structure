@@ -10,9 +10,13 @@ public class BoxWEight extends Box{
 
     BoxWEight(BoxWEight other){
         super(other);
-
         weight = other.weight;
 
+    }
+
+    BoxWEight(double side, double weight){
+        super(side);
+        this.weight = weight;
     }
 
     public BoxWEight(double l , double h , double w , double weight){
