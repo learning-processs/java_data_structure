@@ -7,6 +7,18 @@ Abstraction
     Many way to represent single entity and item;
     Any language that doesn't support -> X object orient 
 
+    Type : 
+
+    COMPILE TIME / STATIC POLYMORPHISM
+    -> Achieve via method overloading..
+    -> method overloading - same name but type, args, return , ordering different
+    e.g multiple constructor.
+
+    RUN-TIME / Dynamic polymorphism: 
+    -> Achieve via method overriding..
+
+
+
 1. Inheritance
 
     pass the things to the children
