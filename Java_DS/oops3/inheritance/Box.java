@@ -12,6 +12,7 @@ public class Box {
     }
 
     Box(double side) {
+        super();      // Object class;
         this.w = side;
         this.l = side;
         this.h = side;

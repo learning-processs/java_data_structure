@@ -18,6 +18,8 @@ public class Main {
         System.out.println(b4.l + " " + b4.weight);
 
 
+        BoxPrice box = new BoxPrice();
+        
 
 
 

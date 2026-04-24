@@ -1,7 +1,12 @@
 properties of oops
 
 Abstraction
-polymorphism
+2. polymorphism
+    Poly -> many Morphism -> Way to represent
+
+    Many way to represent single entity and item;
+    Any language that doesn't support -> X object orient 
+
 1. Inheritance
 
     pass the things to the children
@@ -10,4 +15,10 @@ polymorphism
     Base class
     |           (children can access, means child class inherit the properties of parent class)
     child class
+
+    Type : 
+    Single Inheritance : One class extends another class
+    Multilevel Inheritance : // JAVA not allowed the multiple inheritance -> use Intefaces
+    Hierarchial Inheritance : possible many classes extends the parent one class property.
+    Hybrid Inheritance : // Not allowed
 Encaplustaion
