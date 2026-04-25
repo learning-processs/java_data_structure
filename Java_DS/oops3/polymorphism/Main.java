@@ -3,7 +3,8 @@ package oops3.polymorphism;
 public class Main {
     public static void main(String[] args) {
         Shapes s1 = new Shapes();
-        Shapes c1 = new Circle();
+        Shapes c1 = new Circle();  // Overriding
+        // Circle c1 = new Circle();
         Sqare q1 = new Sqare();
         Triangle t1 = new Triangle();
         Cube c2 = new Cube();

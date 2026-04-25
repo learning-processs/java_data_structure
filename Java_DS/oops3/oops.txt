@@ -17,6 +17,16 @@ Abstraction
     RUN-TIME / Dynamic polymorphism: 
     -> Achieve via method overriding..
 
+    Dynamic method Dispatch...
+
+    -> static can be inherited...
+    -> Static Method can't be override..
+
+    # IMPORTANT :-
+    overrding depend on object
+    static doesn't depend on object
+    hence static can't be overriden
+
 
 
 1. Inheritance
@@ -33,4 +43,9 @@ Abstraction
     Multilevel Inheritance : // JAVA not allowed the multiple inheritance -> use Intefaces
     Hierarchial Inheritance : possible many classes extends the parent one class property.
     Hybrid Inheritance : // Not allowed
-Encaplustaion
+
+
+3. Encaplustaion : 
+    Wrapping up the implimentation of the data members and methods in a class.
+    It basically hide the data in single unit and entity that can be protected 
+    from the outside the world
