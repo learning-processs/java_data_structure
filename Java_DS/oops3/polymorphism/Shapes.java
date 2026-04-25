@@ -1,7 +1,8 @@
 package oops3.polymorphism;
 
 public class Shapes {
-    void area(){
+    // final void area()
+    void area(){  
         System.out.println("Shape class...");
     }
 }

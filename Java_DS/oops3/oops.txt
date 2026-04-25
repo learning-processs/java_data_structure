@@ -1,6 +1,12 @@
 properties of oops
 
-Abstraction
+4. Abstraction : 
+
+    Hiding the unnecessary details and only showing the essential informations.
+    e.g. put the key and start the car 
+         How the car is started it hide from the enduser
+
+
 2. polymorphism
     Poly -> many Morphism -> Way to represent
 
@@ -47,5 +53,13 @@ Abstraction
 
 3. Encaplustaion : 
     Wrapping up the implimentation of the data members and methods in a class.
+
     It basically hide the data in single unit and entity that can be protected 
     from the outside the world
+
+
+ -> Abstraction                     -> Encaplustaion
+    solving the design level           Solving the implimentation level 
+    Issue                              Issue
+    Focus on external stuff            Focus of Internal Working
+                                       Hide the complexity of system(public, private, protected, static)
