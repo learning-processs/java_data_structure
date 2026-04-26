@@ -1,7 +1,7 @@
 package oops4.access;
 
 public class A {
-    private int num;     // Data member
+    protected int num;     // Data member
     String name ;
     int [] arr;
 

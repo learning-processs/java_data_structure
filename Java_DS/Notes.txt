@@ -295,3 +295,75 @@ java.lang (basic classes like String, Math)
 java.util (collections, date utilities)
 
 User-defined packages => package is just a folder, Created by developers to organize their own classes.
+
+
+
+properties of oops
+
+4. Abstraction : 
+
+    Hiding the unnecessary details and only showing the essential informations.
+    e.g. put the key and start the car 
+         How the car is started it hide from the enduser
+
+
+2. polymorphism
+    Poly -> many Morphism -> Way to represent
+
+    Many way to represent single entity and item;
+    Any language that doesn't support -> X object orient 
+
+    Type : 
+
+    COMPILE TIME / STATIC POLYMORPHISM
+    -> Achieve via method overloading..
+    -> method overloading - same name but type, args, return , ordering different
+    e.g multiple constructor.
+
+    RUN-TIME / Dynamic polymorphism: 
+    -> Achieve via method overriding..
+
+    Dynamic method Dispatch...
+
+    -> static can be inherited...
+    -> Static Method can't be override..
+
+    # IMPORTANT :-
+    overrding depend on object
+    static doesn't depend on object
+    hence static can't be overriden
+
+
+
+1. Inheritance
+
+    pass the things to the children
+    children can use those things
+
+    Base class
+    |           (children can access, means child class inherit the properties of parent class)
+    child class
+
+    Type : 
+    Single Inheritance : One class extends another class
+    Multilevel Inheritance : // JAVA not allowed the multiple inheritance -> use Intefaces
+    Hierarchial Inheritance : possible many classes extends the parent one class property.
+    Hybrid Inheritance : // Not allowed
+
+
+3. Encaplustaion : 
+    Wrapping up the implimentation of the data members and methods in a class.
+
+    It basically hide the data in single unit and entity that can be protected 
+    from the outside the world
+
+
+ -> Abstraction                     -> Encaplustaion
+    solving the design level           Solving the implimentation level 
+    Issue                              Issue
+    Focus on external stuff            Focus of Internal Working
+                                       Hide the complexity of system(public, private, protected, static)
+
+
+  private -> access only with in a same class.
+  public  -> can access from anywhere..
