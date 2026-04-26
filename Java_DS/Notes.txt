@@ -291,6 +291,8 @@ A package is a collection of related classes and interfaces grouped together
 Built-in packages (Java API)
 Provided by Java, like:
 
+lang (obj class ), io-> input/output , util(data Structure) , applet , awt , net package
+
 java.lang (basic classes like String, Math)
 java.util (collections, date utilities)
 
@@ -365,5 +367,29 @@ properties of oops
                                        Hide the complexity of system(public, private, protected, static)
 
 
-  private -> access only with in a same class.
-  public  -> can access from anywhere..
+  1.private -> access only with in a same class.
+
+  Same class ✔
+  Same package ❌
+  Different package ❌
+
+
+  2.public  -> can access from anywhere..
+
+  Same class ✔
+  Same package ✔
+  Different package ✔
+
+
+  3.protected -> 
+   Same class ✔
+   Same package ✔
+   Different package ✔ (only through inheritance)
+
+
+  default -> 
+
+  Also called package-private
+  Same class ✔
+  Same package ✔
+  Different package ❌
