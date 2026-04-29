@@ -393,3 +393,13 @@ properties of oops
   Same class ✔
   Same package ✔
   Different package ❌
+
+
+
+"ABSTRACT CLASS"
+
+An abstract class is a class that cannot be instantiated (you cannot create objects of it directly).
+
+An abstract method:
+Has no body (no implementation)
+Must be implemented by subclasses
