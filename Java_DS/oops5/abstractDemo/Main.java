@@ -6,6 +6,7 @@ public class Main {
         Son s1 = new Son(21);
         s1.career();
         s1.partner();
+        s1.normal();
         System.out.println();
 
 
