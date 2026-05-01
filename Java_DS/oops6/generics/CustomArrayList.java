@@ -71,7 +71,15 @@ public class CustomArrayList {
         list.add(7);
         list.add(16);
         list.add(25);
+
+        for(int i = 0 ; i < 14 ; i++){
+            list.add(2 * i);
+        }
         System.out.println(list);
+
+        ArrayList<Integer> list2 = new ArrayList<>();  // Integer => generic
+        list2.add(4);
+        System.out.println(list2);
 
     /*
         ArrayList list = new ArrayList<>();
