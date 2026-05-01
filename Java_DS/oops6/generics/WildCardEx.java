@@ -1,15 +1,20 @@
 package oops6.generics;
 
 import java.util.Arrays;
+import java.util.List;
 
-public class CustomGenArrayList<T> {
+public class WildCardEx<T extends Number> {
 
-    private Object[] data;
+     private Object[] data;
     private static int DEFAULT_SIZE=10;
     private int size = 0;
 
-    public CustomGenArrayList() {
+    public WildCardEx() {
         this.data = new Object[DEFAULT_SIZE];
+    }
+
+    public void getList(List<? extends Number> list){ // WildCard;
+        // here you can only pass Number type;
     }
 
     
@@ -64,14 +69,8 @@ public class CustomGenArrayList<T> {
         '}';
         
     }
+
     public static void main(String[] args) {
         
-        CustomGenArrayList<Integer> list3 = new CustomGenArrayList<>();
-
-        for(int i = 0 ; i < 14 ; i++){
-            list3.add(2 * i);
-        }
-        list3.add(7);
-        System.out.println(list3);
     }
 }
