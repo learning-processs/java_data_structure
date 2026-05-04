@@ -7,17 +7,29 @@ public class CustomLL {
 
     private int size;
 
-
-    public CustomLL(){
+    public CustomLL() {
         this.size = 0;
     }
 
-    public void insertFirst(int val){
+    public void insertFirst(int val) {
         Node newNode = new Node(val);
         newNode.next = head;
         head = newNode;
+
+        if (tail == null) {
+            tail = head;
+        }
+        size += 1;
     }
 
+    public void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("Null");
+    }
 
     private class Node {
         private int value;
@@ -27,13 +39,10 @@ public class CustomLL {
             this.value = value;
         }
 
-        public Node(int value , Node next){
+        public Node(int value, Node next) {
             this.value = value;
             this.next = next;
         }
     }
 
-    public static void main(String[] args) {
-
-    }
 }
