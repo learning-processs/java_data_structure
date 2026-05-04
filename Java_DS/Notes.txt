@@ -403,3 +403,7 @@ An abstract class is a class that cannot be instantiated (you cannot create obje
 An abstract method:
 Has no body (no implementation)
 Must be implemented by subclasses
+
+
+------------------------------LINKEDLIST----------------------
+
