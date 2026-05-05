@@ -11,6 +11,8 @@ public class Main {
         ll.insertAtLast(12);
         ll.insert(10, 2);
         System.out.println(ll.deleteFirst());
+        System.out.println(ll.deleteLast());
+        System.out.println(ll.delete(3));;
         ll.display();
 
         
