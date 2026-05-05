@@ -8,6 +8,8 @@ public class Main {
         ll.insertFirst(16);
         ll.insertFirst(25);
 
+        ll.insertAtLast(12);
+        ll.insert(10, 2);
         ll.display();
 
         
