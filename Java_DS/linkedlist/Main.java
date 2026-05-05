@@ -10,6 +10,7 @@ public class Main {
 
         ll.insertAtLast(12);
         ll.insert(10, 2);
+        System.out.println(ll.deleteFirst());
         ll.display();
 
         
