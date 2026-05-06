@@ -12,7 +12,7 @@ public class Main {
         ll.insert(10, 2);
         System.out.println(ll.deleteFirst());
         System.out.println(ll.deleteLast());
-        System.out.println(ll.delete(3));;
+        System.out.println(ll.delete(2));
         ll.display();
 
         
