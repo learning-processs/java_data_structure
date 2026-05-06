@@ -22,8 +22,8 @@ public class CustomLL {
         size += 1;
     }
 
-    public void insertAtLast(int val){
-        if(tail ==null){
+    public void insertAtLast(int val) {
+        if (tail == null) {
             insertFirst(val);
             return;
         }
@@ -31,47 +31,46 @@ public class CustomLL {
         tail.next = newNode;
         tail = newNode;
 
-        size ++;
+        size++;
     }
 
-    public void insert(int val , int index){
-        if(index == 0){
+    public void insert(int val, int index) {
+        if (index == 0) {
             insertFirst(val);
-            return ;
+            return;
         }
-        if(index == size){
+        if (index == size) {
             insertAtLast(val);
             return;
         }
 
         Node temp = head;
-        for(int i=1; i < index; i++){
+        for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
-        Node newNode = new Node(val , temp.next) ;
+        Node newNode = new Node(val, temp.next);
         temp.next = newNode;
         size++;
     }
 
-    public int deleteFirst(){
+    public int deleteFirst() {
         int val = head.value;
         head = head.next;
 
-        if(head == null){
-            tail =null;
+        if (head == null) {
+            tail = null;
         }
-        size --;
+        size--;
         System.out.print("Removed : ");
         return val;
     }
 
-
-    public int deleteLast(){
-        if(size <=1){
+    public int deleteLast() {
+        if (size <= 1) {
             return deleteFirst();
         }
 
-        Node secondLast = get(size-2);
+        Node secondLast = get(size - 2);
         int val = tail.value;
         tail = secondLast;
         tail.next = null;
@@ -80,12 +79,12 @@ public class CustomLL {
         return val;
     }
 
-    public int delete(int index){
-        if(index == 0){
+    public int delete(int index) {
+        if (index == 0) {
             return deleteFirst();
         }
 
-        if(index == size-1){
+        if (index == size - 1) {
             return deleteLast();
         }
 
@@ -96,7 +95,18 @@ public class CustomLL {
         return val;
     }
 
-    public Node get(int index){
+    public Node findNode(int val){
+        Node node = head;
+       while (node != null) {
+        if(node.value == val){
+            return node;
+        }
+        node = node.next;
+       }
+        return node;
+    }
+
+    public Node get(int index) {
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
@@ -115,7 +125,7 @@ public class CustomLL {
 
     private class Node {
         private int value;
-        private Node next;
+        private Node next;   // ref var
 
         public Node(int value) {
             this.value = value;
