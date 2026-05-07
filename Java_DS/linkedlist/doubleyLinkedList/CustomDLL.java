@@ -24,6 +24,25 @@ public class CustomDLL {
         size++;
     }
 
+    public void insertAtLast(int val){
+        Node newNode = new Node(val);
+        Node last = head;
+
+        newNode.next = null;
+
+        if(head == null){
+            newNode.prev = null;
+            head = newNode;
+            return;
+        }
+        while (last != null) {
+            last = last.next;
+        }
+
+        last.next = newNode;
+        newNode.prev  = last;
+    }
+
     public void display(){
         System.out.print("prev <- ");
         Node node = head;
