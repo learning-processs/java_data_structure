@@ -43,6 +43,39 @@ public class CustomDLL {
         newNode.prev  = last;
     }
 
+    public Node find(int val){
+        Node node = head;
+
+        while (node != null) {
+            if(node.val == val){
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    public void insert(int after ,int val){
+        Node prev = find(after);
+
+        if(prev == null){
+            System.out.println("Does not exist...");
+        }
+
+        Node newNode = new Node(val);
+        newNode.next = prev.next;
+        prev.next = newNode;
+        newNode.prev = prev;
+        if(newNode.next != null){
+            newNode.next.prev = newNode;
+        }
+        
+
+        // newNode.next = prev.next;
+        // newNode.prev = prev;
+        // prev.next = newNode;
+    }
+
     public void display(){
         System.out.print("prev <- ");
         Node node = head;

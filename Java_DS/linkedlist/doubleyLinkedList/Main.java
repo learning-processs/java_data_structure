@@ -7,10 +7,11 @@ public class Main {
         // cd.insertFirst(25);
         // cd.insertFirst(16);
         // cd.insertFirst(7);
-        // cd.display();
+        cd.display();
         cd.insertFirst(25);
-        // cd.insertFirst(16);
-        // cd.insertFirst(7);
+        cd.insertFirst(16);
+        cd.insertFirst(7);
+        cd.insert(16, 88);
         cd.displayRev();
     }
 }
