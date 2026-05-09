@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedlist.basicLinkedList;
 
 public class CustomLL {
 
@@ -51,6 +51,22 @@ public class CustomLL {
         Node newNode = new Node(val, temp.next);
         temp.next = newNode;
         size++;
+    }
+
+    // -----------Insertion in LL using recursion -----------
+    public void insertRec(int val, int idx){
+        head = insertRec(val, idx, head);
+    }
+
+    private Node insertRec(int val , int index ,Node node){
+        if(index == 0){
+            Node temp = new Node(val , node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(val, index--,node.next);
+        return node;
     }
 
     public int deleteFirst() {
