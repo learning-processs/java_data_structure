@@ -10,7 +10,7 @@ public class RemoveDupLL {
         this.size = 0;
     };
 
-    public void insert(int val){
+    public void insertFirst(int val){
         Node newNode = new Node(val);
         newNode.next = head;
         head = newNode;
@@ -62,10 +62,10 @@ public class RemoveDupLL {
 
     public static void main(String[] args) {
         RemoveDupLL rd = new RemoveDupLL();
-        rd.insert(7);
-        rd.insert(16);
-        rd.insert(16);
-        rd.insert(12);
+        rd.insertFirst(7);
+        rd.insertFirst(16);
+        rd.insertFirst(16);
+        rd.insertFirst(12);
         rd.display();
         rd.duplicates();
         rd.display();
