@@ -4,17 +4,18 @@ package linkedListInterview;
 /* */
 // Return T or F
 public class CycleDetection {
-    Node head;
-    Node tail;
+    ListNode head;
+    ListNode tail;
 
-    int size ;
-    public CycleDetection(){
+    int size;
+
+    public CycleDetection() {
         this.size = 0;
     }
 
     public boolean hasCycle() {
-        Node fast = head;
-        Node slow = head;
+        ListNode fast = head;
+        ListNode slow = head;
 
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
@@ -26,34 +27,63 @@ public class CycleDetection {
         return false;
     }
 
+    public int lengthOfCycle() {
+        ListNode fast = head;
+        ListNode slow = head;
 
-    public int lengthOfCycle(){
-        Node fast = head;
-        Node slow = head;
-
-        while (fast != null && fast.next !=null) {
-            fast =  fast.next.next;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
             slow = slow.next;
 
-            if(fast == slow){
+            if (fast == slow) {
                 // Calculate the length;
-                Node temp = slow;
+                ListNode temp = slow;
                 int length = 0;
 
                 do {
                     temp = temp.next;
-                    length ++;
-                }while (temp != slow);
+                    length++;
+                } while (temp != slow);
 
                 return length;
             }
         }
-
         return 0;
     }
 
+
+    public ListNode detectCycle(ListNode head){
+        int length = 0;
+
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                length = lengthOfCycle();
+                break;
+            }
+        }
+        // Find the start 
+        ListNode f = head;
+        ListNode s = head;
+        while (length > 0) {
+            s = s.next;
+            length--;
+        }
+        //keep moving both forward they meet at start;
+        while (f != s) {
+            f = f.next;
+            s = s.next;
+        }
+        return s;
+
+    }
+
     public void insertFirst(int val) {
-        Node newNode = new Node(val);
+        ListNode newNode = new ListNode(val);
         newNode.next = head;
         newNode.prev = null;
         if (head != null) {
@@ -67,7 +97,7 @@ public class CycleDetection {
             insertFirst(val);
             return;
         }
-        Node newNode = new Node(val);
+        ListNode newNode = new ListNode(val);
         tail.next = newNode;
         tail = newNode;
 
@@ -84,18 +114,18 @@ public class CycleDetection {
             return;
         }
 
-        Node temp = head;
+        ListNode temp = head;
         for (int i = 1; i < index; i++) {
             temp = temp.next;
         }
-        Node newNode = new Node(val, temp.next);
+        ListNode newNode = new ListNode(val, temp.next);
         temp.next = newNode;
         size++;
     }
 
     public void display() {
         System.out.print("prev <- ");
-        Node node = head;
+        ListNode node = head;
         while (node != null) {
             System.out.print(node.val + " <- -> ");
             node = node.next;
@@ -103,16 +133,16 @@ public class CycleDetection {
         System.out.print("END");
     }
 
-    public class Node {
+    public static class ListNode {
         int val;
-        Node next;
-        Node prev;
+        ListNode next;
+        ListNode prev;
 
-        public Node(int val) {
+        public ListNode(int val) {
             this.val = val;
         }
 
-        public Node(int val, Node next) {
+        public ListNode(int val, ListNode next) {
             this.val = val;
             this.next = next;
 
@@ -136,6 +166,35 @@ public class CycleDetection {
 
         int len = list.lengthOfCycle();
         System.out.println(len);
+
+
+
+
+        // Creating nodes
+        ListNode n1 = new ListNode(1);
+        ListNode n2 = new ListNode(2);
+        ListNode n3 = new ListNode(3);
+        ListNode n4 = new ListNode(4);
+        ListNode n5 = new ListNode(5);
+
+        // Connecting nodes
+        n1.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = n5;
+
+        // Creating cycle
+        // 5 -> 3
+        n5.next = n3;
+
+        // Passing head
+        ListNode ans1 = list.detectCycle(n1);
+
+        if (ans1 != null) {
+            System.out.println("Cycle starts at node: " + ans1.val);
+        } else {
+            System.out.println("No cycle");
+        }
 
     }
 }
