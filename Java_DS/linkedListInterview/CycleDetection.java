@@ -12,8 +12,7 @@ public class CycleDetection {
         this.size = 0;
     }
 
-    public boolean detectCycle() {
-
+    public boolean hasCycle() {
         Node fast = head;
         Node slow = head;
 
@@ -25,6 +24,32 @@ public class CycleDetection {
             }
         }
         return false;
+    }
+
+
+    public int lengthOfCycle(){
+        Node fast = head;
+        Node slow = head;
+
+        while (fast != null && fast.next !=null) {
+            fast =  fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow){
+                // Calculate the length;
+                Node temp = slow;
+                int length = 0;
+
+                do {
+                    temp = temp.next;
+                    length ++;
+                }while (temp != slow);
+
+                return length;
+            }
+        }
+
+        return 0;
     }
 
     public void insertFirst(int val) {
@@ -106,8 +131,11 @@ public class CycleDetection {
 
         list.head.next.next.next.next.next = list.head.next.next;
 
-        boolean ans = list.detectCycle();
+        boolean ans = list.hasCycle();
         System.out.println("Cycle Present : " + ans);
+
+        int len = list.lengthOfCycle();
+        System.out.println(len);
 
     }
 }
