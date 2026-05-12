@@ -5,6 +5,12 @@ package linkedListInterview;
 // Return T or F
 public class CycleDetection {
     Node head;
+    Node tail;
+
+    int size ;
+    public CycleDetection(){
+        this.size = 0;
+    }
 
     public boolean detectCycle() {
 
@@ -29,6 +35,37 @@ public class CycleDetection {
             head.prev = newNode;
         }
         head = newNode;
+    }
+
+    public void insertAtLast(int val) {
+        if (tail == null) {
+            insertFirst(val);
+            return;
+        }
+        Node newNode = new Node(val);
+        tail.next = newNode;
+        tail = newNode;
+
+        size++;
+    }
+
+    public void insert(int val, int index) {
+        if (index == 0) {
+            insertFirst(val);
+            return;
+        }
+        if (index == size) {
+            insertAtLast(val);
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+        Node newNode = new Node(val, temp.next);
+        temp.next = newNode;
+        size++;
     }
 
     public void display() {
