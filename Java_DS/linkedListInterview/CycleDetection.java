@@ -66,6 +66,9 @@ public class CycleDetection {
                 break;
             }
         }
+        if(length == 0){
+            return null;
+        }
         // Find the start 
         ListNode f = head;
         ListNode s = head;
