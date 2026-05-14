@@ -11,10 +11,8 @@ public class MergeLL {
     }
 
     public static MergeLL merge(MergeLL first , MergeLL second){
-
         Node fir = first.head;
         Node sec = second.head;
-
 
         MergeLL ans = new MergeLL();
 
