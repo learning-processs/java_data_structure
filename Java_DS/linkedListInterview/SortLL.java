@@ -161,6 +161,20 @@ public class SortLL {
         System.out.println("Null");
     }
 
+    public void reverse(ListNode node){
+        if (node == tail) {
+            head = tail;
+            return;
+        }
+        reverse(node.next);
+
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+    // In place reversal of linkedList
+
     public class ListNode {
         int val;
         ListNode next;
@@ -173,6 +187,10 @@ public class SortLL {
         }
 
     }
+
+    // Recursion Reverse..
+
+    
 
     public static void main(String[] args) {
         SortLL sl = new SortLL();
