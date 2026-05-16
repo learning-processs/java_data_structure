@@ -1,6 +1,5 @@
 package linkedListInterview;
 
-import org.w3c.dom.NodeList;
 
 public class SortLL {
     ListNode head;
