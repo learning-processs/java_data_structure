@@ -13,21 +13,21 @@ public class ReverseLLInRange {
         }
 
         ListNode prev = null;
-        ListNode present = head;
-        for(int i = 0 ; present != null && i < left - 1 ; i++){
-            prev = present;
-            present = present.next;
+        ListNode current = head;
+        for(int i = 0 ; current != null && i < left - 1 ; i++){
+            prev = current;
+            current = current.next;
         }
         ListNode last = prev;
-        ListNode newEnd = present;
+        ListNode newEnd = current;
 
         // reverse b/w lef and right
 
-        ListNode next = present.next;
-        for (int index = 0; present !=null &&  index < right - left; index++) {
-            present.next = prev;
-            prev = present;
-            present = next ;
+        ListNode next = current.next;
+        for (int index = 0; current !=null &&  index < right - left + 1; index++) {
+            current.next = prev;
+            prev = current;
+            current = next ;
             if(next != null){
                 next = next.next;
             }
@@ -39,7 +39,7 @@ public class ReverseLLInRange {
             head = prev;
         }
 
-        newEnd.next = present;
+        newEnd.next = current;
         return head;
     }
 
