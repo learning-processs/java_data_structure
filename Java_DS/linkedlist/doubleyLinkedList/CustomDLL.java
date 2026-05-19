@@ -24,6 +24,7 @@ public class CustomDLL {
         size++;
     }
 
+    @SuppressWarnings("null")
     public void insertAtLast(int val) {
         Node newNode = new Node(val);
         Node last = head;

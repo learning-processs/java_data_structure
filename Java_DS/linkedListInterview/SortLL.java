@@ -1,6 +1,5 @@
 package linkedListInterview;
 
-
 public class SortLL {
     ListNode head;
     ListNode tail;
