@@ -14,6 +14,14 @@ public class CustomQueue {
         this.data = new int[size];
     }
 
+    public boolean isFull() {
+        return end == data.length;
+    }
+
+    public boolean isEmpty() {
+        return end == 0;
+    }
+
     public boolean insert(int item) {
         if (isFull()) {
             return false;
@@ -52,13 +60,7 @@ public class CustomQueue {
         System.out.println("END");
     }
 
-    public boolean isFull() {
-        return end == data.length;
-    }
-
-    public boolean isEmpty() {
-        return end == 0;
-    }
+    
 
     public static void main(String[] args) {
         CustomQueue q = new CustomQueue();
