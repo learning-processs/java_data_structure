@@ -35,6 +35,19 @@ class QUsingStack {
         first.push(item);
     }
 
+    public void efficientAdd(int item) throws Exception{
+        while (!first.isEmpty()) {
+            second.push(first.pop());
+        }
+        first.push(item);
+        while (!second.isEmpty()) {
+            first.push(second.pop());
+        }
+    }
+    public int efficientRemove(){
+        return first.pop();
+    }
+
     public int remove() throws Exception{
 
         if (first.isEmpty()) {
