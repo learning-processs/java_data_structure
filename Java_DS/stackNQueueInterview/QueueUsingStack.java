@@ -48,6 +48,10 @@ class QUsingStack {
         return first.pop();
     }
 
+    public int efficientPeek(){
+        return first.peek();
+    }
+
     public int remove() throws Exception{
 
         if (first.isEmpty()) {
