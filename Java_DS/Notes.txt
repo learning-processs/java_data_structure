@@ -405,5 +405,26 @@ Has no body (no implementation)
 Must be implemented by subclasses
 
 
-------------------------------LINKEDLIST----------------------
+------------------------------tRee----------------------
 
+Efficiently insert and delete in tree that's why we prefer the tree
+O(nlog)
+BST=> sorted..
+
+-> Unbalanced Binary tree
+-> binary search -> balanced
+
+-> AVL -> DAta base, file systm, routing, path finding...
+
+Types of Binary Tree : 
+
+Complete Binary Tree :-> all level are full apart from last full left or right;
+
+Full Binary Tree and String Binary Tree :-> Each Node has either 0 or 2 Children no 1 children;
+e.g. Compression
+
+Perfect Binary Tree :-> all Internal node have 2 children and all leave node are at same level;
+
+Hight Blanced Binary Tree : -> AVL, RB tree  -> o(log N);
+
+Skewed Binary Tree : Every Node has 1 Child..
