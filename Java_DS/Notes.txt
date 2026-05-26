@@ -420,11 +420,17 @@ Types of Binary Tree :
 
 Complete Binary Tree :-> all level are full apart from last full left or right;
 
-Full Binary Tree and String Binary Tree :-> Each Node has either 0 or 2 Children no 1 children;
+Full Binary Tree and Strict Binary Tree :-> Each Node has either 0 or 2 Children no 1 children;
 e.g. Compression
 
 Perfect Binary Tree :-> all Internal node have 2 children and all leave node are at same level;
 
 Hight Blanced Binary Tree : -> AVL, RB tree  -> o(log N);
 
-Skewed Binary Tree : Every Node has 1 Child..
+Skewed Binary Tree : Every Node has 1 Child.. O(n)
+like -> linked list 
+
+Orderd Binary Tree: Every Node has some property and condition that it have to follow
+e.g. BST
+
+PERFCT binary Tree;

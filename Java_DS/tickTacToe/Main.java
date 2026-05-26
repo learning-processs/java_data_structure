@@ -25,7 +25,7 @@ public class Main {
                 board[row][col] = palyer;
                 gameOver = haveWon(board, palyer);
                 if(gameOver){
-                    System.out.print("Player " + palyer + " has won..");
+                    System.out.print(" Player " + palyer + " has won.. ");
                 }else{
                     if (palyer == 'X') {
                         palyer = 'O';
