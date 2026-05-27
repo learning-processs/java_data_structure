@@ -48,7 +48,7 @@ public class BinaryTree {
             populate(sc , node.left);
         }
 
-        System.out.println("Do you wann to Enter left of " + node.value);
+        System.out.println("Do you wann to Enter Right of " + node.value);
         boolean right = sc.nextBoolean();
         if(right){
             System.out.println("Enter the value of the right of " + node.value);
@@ -71,10 +71,34 @@ public class BinaryTree {
         display(node.right, indent + "  ");
     }
 
+    public void prettyDisplay(){
+        prettyDisplay(root, 0);
+    }
+
+    public void prettyDisplay(Node node , int level){
+        if(node == null){
+            return;
+        }
+
+        prettyDisplay(node.right , level + 1);
+
+        if(level != 0){
+            for (int i = 0; i <level -1; i++) {
+                System.out.print("|\t\t");
+            }
+            System.out.println(" |-------> " + node.value);
+
+        }else{
+            System.out.println(node.value);
+        }
+        prettyDisplay(node.left , level + 1);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         BinaryTree tree = new BinaryTree();
         tree.populate(sc);
         tree.display();
+        tree.prettyDisplay();
     }
 }
