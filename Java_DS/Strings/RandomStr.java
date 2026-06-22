@@ -21,8 +21,6 @@ public class RandomStr {
 
     }
 
-
-   
     public static void main(String[] args) {
         
         Random rand = new Random();
