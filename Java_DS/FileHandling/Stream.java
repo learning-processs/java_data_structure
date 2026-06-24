@@ -58,13 +58,13 @@ public class Stream {
             System.out.println(e.getMessage());
         }
 
-        // try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
-        //     while (br.ready()) {
-        //         System.out.println(br.readLine());
-        //     }
-        // }catch(IOException e){
-        //     System.out.println(e.getMessage());
-        // }
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
+            while (br.ready()) {
+                System.out.println(br.readLine());
+            }
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
 
 
     }
