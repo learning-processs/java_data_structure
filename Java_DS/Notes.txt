@@ -434,3 +434,15 @@ Orderd Binary Tree: Every Node has some property and condition that it have to f
 e.g. BST
 
 PERFCT binary Tree;
+
+
+
+
+
+HashCode :-
+
+all element as the positiv Number.
+Hashcode -> very large  (reduce it -> hashing)
+Reduce the element to the size m.
+
+
