@@ -48,8 +48,7 @@ public class MosAlgo {
             blocks[blocks_id] += arr[i];
         }
 
-
-         System.out.println(query(blocks, arr, 2, 8, sqrt)); // 28
+        System.out.println(query(blocks, arr, 2, 8, sqrt)); // 28
 
         update(blocks, arr, 4, 10, sqrt); // arr[4] = 10
 
